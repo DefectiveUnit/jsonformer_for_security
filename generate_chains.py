@@ -1,7 +1,7 @@
 from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
-import creds
+#import creds
 
 task_agent = ChatOpenAI(temperature=0)
 audit_agent = ChatOpenAI(temperature=0)

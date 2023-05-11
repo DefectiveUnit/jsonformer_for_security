@@ -1,8 +1,18 @@
 from generate_chains import task_prompt, audit_prompt, task_chain, audit_chain
 import streamlit as st
+import os
 
 # Set up the Streamlit layout
-st.title("Agent App")
+st.title("Can JSON stop attacks?")
+
+# Sidebar for API key input
+api_key = st.sidebar.text_input("Enter your API key")
+
+# Set the API key in the environment variable
+if api_key == st.secrets.password:
+    os.environ["OPENAI_API_KEY"] = st.secrets.my_key
+else:
+    os.environ["OPENAI_API_KEY"] = api_key
 
 # User input
 user_input = st.text_input("Enter your prompt")
