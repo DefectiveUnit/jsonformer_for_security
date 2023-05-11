@@ -1,7 +1,8 @@
 import streamlit as st
 import os
 
-os.environ["OPENAI_API_KEY"] = ""
+os.environ["OPENAI_API_KEY"] = st.secrets.my_key
+
 from generate_chains import task_prompt, audit_prompt, task_chain, audit_chain
 
 # Set up the Streamlit layout
