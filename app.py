@@ -2,6 +2,8 @@ from generate_chains import task_prompt, audit_prompt, task_chain, audit_chain
 import streamlit as st
 import os
 
+os.environ["OPENAI_API_KEY"] = ""
+
 # Set up the Streamlit layout
 st.title("Can JSON stop attacks?")
 
